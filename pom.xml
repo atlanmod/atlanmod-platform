@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.atlanmod.platform</groupId>
+    <artifactId>platform</artifactId>
+    <version>?</version>
+
+    <packaging>pom</packaging>
+
+    <name>Platform</name>
+    <description>A platform for all Atlanmod projects</description>
+
+    <url>https://github.com/atlanmod/atlanmod-platform</url>
+
+    <organization>
+        <name>Atlanmod</name>
+        <url>http://www.atlanmod.org</url>
+    </organization>
+
+    <modules>
+        <module>Commons</module>
+        <module>platform-core</module>
+    </modules>
+
+    <repositories>
+
+        <repository>
+            <id>mvn-repository</id>
+            <url>https://mvnrepository.com/repos/central</url>
+        </repository>
+
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.4.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.eclipse.m2m.atl</groupId>
+                <artifactId>org.eclipse.m2m.atl.common</artifactId>
+                <version>4.0.0</version>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
