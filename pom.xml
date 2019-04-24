@@ -22,6 +22,7 @@
     <modules>
         <module>Commons</module>
         <module>platform-core</module>
+        <module>emfviews</module>
     </modules>
 
     <dependencies>
