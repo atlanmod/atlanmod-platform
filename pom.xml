@@ -5,7 +5,7 @@
 
     <groupId>org.atlanmod.platform</groupId>
     <artifactId>platform</artifactId>
-    <version>?</version>
+    <version>0.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
@@ -24,15 +24,6 @@
         <module>platform-core</module>
     </modules>
 
-    <repositories>
-
-        <repository>
-            <id>mvn-repository</id>
-            <url>https://mvnrepository.com/repos/central</url>
-        </repository>
-
-    </repositories>
-
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -41,17 +32,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-
-            <plugin>
-                <groupId>org.eclipse.m2m.atl</groupId>
-                <artifactId>org.eclipse.m2m.atl.common</artifactId>
-                <version>4.0.0</version>
-            </plugin>
-
-        </plugins>
-    </build>
-
+    
 </project>
