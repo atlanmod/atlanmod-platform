@@ -1,29 +1,28 @@
-  os: linux
-  sudo: false
-  dist: trusty
+os: linux
+sudo: false
+dist: trusty
 
-  language: java
-  jdk: oraclejdk8
+language: java
+jdk: oraclejdk8
 
-  cache:
+cache:
     directories:
-      - '$HOME/.m2/repository'
+        - '$HOME/.m2/repository'
 
-  init_submodules:
+init_submodules:
     #UPDATE SUBMODULES
     - git submodule update --init --recursive
 
-  install:
+install:
     #LOCALLY INSTALL sexp2emf
     - git clone --depth 1 https://github.com/atlanmod/sexp2emf.git
     - mvn --batch-mode -Dmaven.javadoc.skip=true --file sexp2emf/pom.xml install
 
-  script:
+script:
     #ENFORCE MAVEN VERSION
     - mvn -pl . validate
-    #BUILD SCRIPT
-    - mvn -B -V install
+    #BUILD SCRIPT AND REPORTS
+    - mvn -B -V install jxr:aggregate pmd:cpd pmd:pmd
 
-  after_success:
-    #DEPLOYMENT SCRIPTS
-
+after_success:
+#DEPLOYMENT SCRIPTS
