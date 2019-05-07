@@ -5,10 +5,6 @@
         This ruleset checks code for bad stuff.
     </description>
 
-    <!-- Exclude generated sources -->
-
-    <exclude-pattern>.*/neoemf/tests/models/.*</exclude-pattern>
-
     <!-- Rulesets -->
 
     <rule ref="rulesets/java/basic.xml" />
