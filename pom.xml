@@ -24,7 +24,6 @@
         <module>platform-core</module>
         <module>NeoEMF</module>
         <module>emfviews</module>
-        <module>modisco</module>
     </modules>
 
     <build>
