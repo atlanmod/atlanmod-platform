@@ -4,3 +4,9 @@
 [submodule "emfviews"]
 	path = emfviews
 	url = https://github.com/atlanmod/emfviews
+[submodule "NeoEMF"]
+	path = NeoEMF
+	url = https://github.com/atlanmod/NeoEMF
+[submodule "modisco"]
+	path = modisco
+	url = https://github.com/atlanmod/modisco

@@ -20,9 +20,9 @@ install:
 
 script:
     #ENFORCE MAVEN VERSION
-    - mvn -pl . validate
+    - mvn -pl . enforcer:enforce
     #BUILD SCRIPT AND REPORTS
-    - mvn -B -V install jxr:aggregate pmd:cpd pmd:pmd
+    - mvn -B -V -DskipTests install jxr:aggregate site
 
 after_success:
 #DEPLOYMENT SCRIPTS
