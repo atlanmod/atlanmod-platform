@@ -11,7 +11,7 @@ cache:
 
 init_submodules:
     #UPDATE SUBMODULES
-    - git submodule update --init --recursive
+    - git submodule update --remote --init --recursive
 
 install:
     #LOCALLY INSTALL sexp2emf
