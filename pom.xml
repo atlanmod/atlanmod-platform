@@ -24,6 +24,7 @@
         <module>platform-core</module>
         <module>NeoEMF</module>
         <module>emfviews</module>
+        <module>modisco</module>
     </modules>
 
     <build>
@@ -76,6 +77,26 @@
                     <sourceEncoding>utf-8</sourceEncoding>
                     <excludes>**/antlr/**</excludes>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.0.0</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>index</report>
+                            <report>summary</report>
+                            <report>dependencies</report>
+                            <report>dependency-info</report>
+                            <report>dependency-convergence</report>
+                            <report>plugins</report>
+                            <report>plugin-management</report>
+                            <report>modules</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
         </plugins>
     </reporting>
