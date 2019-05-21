@@ -1,3 +1,0 @@
-= WebApp Metamodel =
-
-''no documentation yet''

@@ -1,2 +1,0 @@
-== EMF Implementation ==
-This component provides an Ecore definition of KDM and an EMF implementation of the classes defined by this standard.

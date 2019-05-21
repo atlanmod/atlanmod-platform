@@ -1,3 +1,0 @@
-= EjbJar Metamodel =
-
-''no documentation yet''
