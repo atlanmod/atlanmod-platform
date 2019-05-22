@@ -9,6 +9,12 @@ cache:
     directories:
         - '$HOME/.m2/repository'
 
+before_script:
+    #NEEDED TO RUN THE GUI TESTS
+    - "export DISPLAY=:99.0"
+    - "sh -e /etc/init.d/xvfb start"
+    - sleep 3 # give xvfb some time to start
+
 init_submodules:
     #UPDATE SUBMODULES
     - git submodule update --init --recursive
