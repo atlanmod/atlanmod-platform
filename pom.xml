@@ -24,7 +24,7 @@
         <module>platform-core</module>
         <module>NeoEMF</module>
         <module>emfviews</module>
-        <module>modisco</module>
+        <module>atl/releng/org.eclipse.m2m.atl.releng.parent</module>
     </modules>
 
     <build>

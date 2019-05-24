@@ -7,6 +7,6 @@
 [submodule "NeoEMF"]
 	path = NeoEMF
 	url = https://github.com/atlanmod/NeoEMF
-[submodule "modisco"]
-	path = modisco
-	url = https://github.com/atlanmod/modisco
+[submodule "atl"]
+	path = atl
+	url = https://github.com/atlanmod/atl
