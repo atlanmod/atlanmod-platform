@@ -9,6 +9,12 @@ cache:
     directories:
         - '$HOME/.m2/repository'
 
+addons:
+    sonarcloud:
+        organization: "atlanmod"
+        token:
+            secure: "OfVOu9Uxa9acvO/QETvdyZhGRZWJQE156GIV6EOVeOUXBnehed30p2yjrcXxl/VAlPhwavcY664W8htbYsi1sPQwzuvoF9Or5bSDfRV2yg+dDK3e4TrsbgG34jnol4mIUnH9LSQpuTRX3XUv9cyZkT+w1NWsZBJ2CCqW/wQrzBUjfrSI9Pn90Sixz+iXpGBKWRQAK3co0kBFHEvlPQHFe1KMbRtw/crT/QSkfLvbf6SAHOrsDzAKxhbYk1y9UqyUWEva/QNj7w2gXzxdFCgo+Et5k3r9wZk9gx29oGQzDrAtYK523w6cFZf0qEhTKgHqaweRzMecp61w7f8vQcRckQNT0CHMSkas5KBMNQgaOoBbq+CY4khO1f47h0i7lj0xzaKA+1Pc2W5i7iOhgWZBpxXOCIFjCCauHrtCV5gsNxHoYdGgLKYGqFR5UR0500K4q7ePS4IZJ15jJhWj7lGwJX0oTTUmBsGLxomnxSjKSod9byX3DNmKpbSrj/p7how5hh/g/aw4H89sTooXsV8rHXKuMGAsYkhGhnZWQ1vvdk9CKV+EYekyqgwmGtKv6zHdOJtd0ZjgGziDBqrATuJLc5FBOrJ1szZE1gk6GKLHrG8FVvoLd7PEwtmQxzRqm06RZxLYCjEvZnRSAGlYUDghgsQjWI7xeIg31+6tmYc+rrE="
+
 before_script:
     #NEEDED TO RUN THE GUI TESTS
     - "export DISPLAY=:99.0"
@@ -28,7 +34,7 @@ script:
     #ENFORCE MAVEN VERSION
     - mvn -pl . enforcer:enforce
     #BUILD SCRIPT AND REPORTS
-    - travis_wait 80 mvn -B -V -q -DskipTests --global-toolchains .travis.maven.toolchains.xml -P photon install jxr:aggregate site
+    - travis_wait 80 mvn -B -V -q -DskipTests --global-toolchains .travis.maven.toolchains.xml -P photon jacoco:prepare-agent install sonar:sonar jxr:aggregate site
 
 after_success:
 #DEPLOYMENT SCRIPTS
