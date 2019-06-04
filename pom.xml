@@ -25,6 +25,7 @@
         <module>NeoEMF</module>
         <module>emfviews</module>
         <module>atl/releng/org.eclipse.m2m.atl.releng.parent</module>
+        <module>build-tools</module>
     </modules>
 
     <build>
@@ -74,6 +75,20 @@
                     </execution>
                 </executions>
             </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.11.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.atlanmod.platform</groupId>
+                        <artifactId>build-tools</artifactId>
+                        <version>0.1-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
         </plugins>
 
     </build>
@@ -86,7 +101,7 @@
                 <version>3.11.0</version>
                 <configuration>
                     <rulesets>
-                        <ruleset>${basedir}/.util/ruleset.xml</ruleset>
+                        <ruleset>build-tools/pmd/ruleset.xml</ruleset>
                     </rulesets>
                     <printFailingErrors>true</printFailingErrors>
                     <skipEmptyReport>false</skipEmptyReport>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.atlanmod.platform</groupId>
+    <artifactId>build-tools</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <name>Build Tools</name>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
