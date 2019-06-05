@@ -14,7 +14,7 @@ addons:
     sonarcloud:
         organization: "atlanmod"
         token:
-            secure: "bQjV8qO+x8R7bT/FQgHGdad0uELUxr/GWA6aJREQHc0HWvh2tAl7VH3BiUB+XqLY982tjEDVADNiQI1+WQTMe8Jz46bvffrRnJ/cZ401bwEJzVvToROwegHrsGnLOGglIWmDj/ZlIha1OKVzn8rlKQvCI5Bbgxh2akO5je0ukpraQpJFr1t3QXrr5BYhINQiRbyxJF7YiFhTDsunMQnqXiWaH/HJ4/cT1GUVC09kkEKhlWygGIiW4HI4LfpoAq4fYxoxBFGN+ZGaI2oCLRaWbJWvVgrIAAztwMqgBwGG0V7xzkus6jYMeQEnMuFCvBfc3Nse2ZE/AO4G4wDUtGxim+LEvBQI/MaXxZRDVCVVY+TN7p132JtkqLz35k3JsGsz4zIzLQi6vMqmxlZokSSCVtLLd32+5MCfu906m0J8xAXyMJVr/6ZHefbRFUTkPSvHoXMKZfXDvd0qEumXb+JxZSLHCgksujl+rcYOQCmTP89VvSvpMiSbKzK6NqJJeutwSqeRPDTc3E+n1K65adn5DFRRf5vOG/1Rt3JQ0VI2CWQ3DDv4djkAZNQRbJQ/k/bAAAu6mi2d9hOhS/A9KnHaPFywNMTnkToJn15/Ar5vO3x8ZBiYsPKO0wPPuLf6blu3VmLHgNKAV05NKnRsXr0Y0P2KNRZ3jXE9rFknzUBQT/c="
+            secure: "0Hh0oQCAFRin9zRPjLaqpFoppCuL4/jn5O7dhySrICDiETf+2vZHqnnaR+H8EoJRsq1daCabQ/R9EkXETFBOgYRyEYbTX+z0nXZZWdPGaFXTkTdNh5mrOY8VXlZWsuJqpOR1yNdymJJMOKeqvgj6YL+2EeU3+t5y/BlFWz/ITW2yXM4vGLc8lXtBLofmKW+u64zZlRnFgrovr4HoGjIVgGf9egSORMW5bASmL6WbMIp+OfgwJ7M8XhkvuiM7sGFsF/5/TPnTSyYVr3K3DDwUNBvLwsdGlMlizjztHN5l8s4lS9iR7yzkm+JAIJ3e2/sD3hNl+P5P9ngeLh8qwNrdb24HYrvqv8pXqImUiXBt4r41DgMxvFJJRj44Xk+6OAiXpLVTfaXW8qzT5NQkpXEtDhrF4+xRzXqqCBDGmmCldWtjgvrzvWhCI+gy3xhp2uiVUc3I/lYBWReB3iDDYky1yCasFqoB/yfj6yiWjuWFDu2D30+sKi+M8+RuXFpXuyhD+gqJyFx7Pnyq1rF45/w63mUbdaB6n5Z/esfoalVjcTZi6uKBcZ9Kts78TEpTQGBiDmIJuZEguh0jummitPK9GQRzmA4mF7MsBiJk+ofme2jqXjQMTOM/L/c1tMCxqLJsb84P5cm2wJWskIhKtdP/Vn1vzUPk5J/kb8CFRIckA8A="
 
 before_script:
     #NEEDED TO RUN THE GUI TESTS
@@ -35,7 +35,7 @@ script:
     #ENFORCE MAVEN VERSION
     - mvn -pl . enforcer:enforce
     #BUILD SCRIPT AND REPORTS
-    - mvn -B -V -DskipTests --global-toolchains .travis.maven.toolchains.xml -P photon install jxr:aggregate site
+    - mvn -B -V -DskipTests --global-toolchains .travis.maven.toolchains.xml -P photon install sonar:sonar jxr:aggregate site
 
 after_success:
 #DEPLOYMENT SCRIPTS
