@@ -36,7 +36,7 @@ script:
     - mvn -pl . enforcer:enforce
     #BUILD SCRIPT AND REPORTS
     - mvn -B -V -DskipTests --global-toolchains .travis.maven.toolchains.xml -P photon install jxr:aggregate site
-    - mvn -B -V -DskipTests -P photon sonar:sonar
+    - mvn -B -V -DskipTests -P photon -Dsonar.scm.exclusions.disabled sonar:sonar
 
 after_success:
 #DEPLOYMENT SCRIPTS
