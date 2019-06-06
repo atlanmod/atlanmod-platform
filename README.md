@@ -13,6 +13,6 @@ To change the ruleset, update the file at build-tools/pmd/ruleset.xml.
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=org.atlanmod.platform%3Aplatform&metric=coverage)](https://sonarcloud.io/dashboard?id=org.atlanmod.platform%3Aplatform)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=org.atlanmod.platform%3Aplatform&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=org.atlanmod.platform%3Aplatform)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=org.atlanmod.platform%3Aplatform&metric=ncloc)](https://sonarcloud.io/dashboard?id=org.atlanmod.platform%3Aplatform)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=org.atlanmod.platform%3Aplatform&metric=squale_rating)](https://sonarcloud.io/dashboard?id=org.atlanmod.platform%3Aplatform)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=org.atlanmod.platform%3Aplatform&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=org.atlanmod.platform%3Aplatform)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=org.atlanmod.platform%3Aplatform&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=org.atlanmod.platform%3Aplatform)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=org.atlanmod.platform%3Aplatform&metric=security_rating)](https://sonarcloud.io/dashboard?id=org.atlanmod.platform%3Aplatform)
