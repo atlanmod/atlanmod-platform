@@ -35,7 +35,8 @@ script:
     #ENFORCE MAVEN VERSION
     - mvn -pl . enforcer:enforce
     #BUILD SCRIPT AND REPORTS
-    - mvn -B -V -DskipTests --global-toolchains .travis.maven.toolchains.xml -P photon install sonar:sonar jxr:aggregate site
+    - mvn -B -V -DskipTests --global-toolchains .travis.maven.toolchains.xml -P photon install jxr:aggregate site
+    - mvn -B -V -DskipTests sonar:sonar
 
 after_success:
 #DEPLOYMENT SCRIPTS
