@@ -36,7 +36,8 @@ script:
     - mvn -pl . enforcer:enforce
     #BUILD SCRIPT AND REPORTS
     - mvn -B -V -DskipTests --global-toolchains .travis.maven.toolchains.xml -P photon install jxr:aggregate site
-    - mvn -B -V -P photon -Dsonar.scm.exclusions.disabled sonar:sonar
+    #RUN SONARCLOUD ANALYSIS WITH COVERAGE
+    - mvn -B -V -P photon -Dsonar.scm.exclusions.disabled jacoco:prepare-agent test jacoco:report jacoco:report-aggregate sonar:sonar
 
 after_success:
 #DEPLOYMENT SCRIPTS
